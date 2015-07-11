@@ -1,5 +1,8 @@
 /*
-Write a JavaScript program current-time.js that prints on the console the current time in format hours:minutes. The hours should be printed without leading zeroes. The minutes should be printed as two-digit number with a leading zero when needed. Execute your program through Node.js. A few sample outputs are given below:
+Write a JavaScript program current-time.js that prints on the console the current time 
+in format hours:minutes. The hours should be printed without leading zeroes. 
+The minutes should be printed as two-digit number with a leading zero when needed. 
+Execute your program through Node.js. A few sample outputs are given below:
 */
 
 var date = new Date();
