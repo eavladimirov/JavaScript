@@ -1,0 +1,36 @@
+/*
+Write a JavaScript function findPalindromes(value) that extracts from a given text 
+all palindromes, e.g. "ABBA", "lamal", "exe". Write JS program palindromesExtract.js 
+that invokes your function with the sample input data below and prints the output at the 
+console
+*/
+
+
+function findPalindromes(inputString){
+	var arrWords = inputString.split(/[\s,. ]+/);
+	var i = 0, j = 0;
+	check = 0;
+	//console.log(arrWords);
+	
+	for(i; i<arrWords.length; i++){
+		for(j; j < parseInt((arrWords[i].length)/2); j++){
+			if(arrWords[i][j] == arrWords[i][arrWords[i].length - j - 1]){
+				//console.log(arrWords[i][j]);
+				//console.log(arrWords[i][arrWords[i].length - j - 1]);
+			}else{
+				check = 1;
+				
+			}
+		}
+		
+		if(check == 0){
+			console.log(arrWords[i] + ", ");
+		}else{
+			check = 0;
+		}
+		j = 0;
+	}
+	
+}
+
+findPalindromes('there is a man, his name was bob.');
