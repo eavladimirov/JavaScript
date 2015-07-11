@@ -1,0 +1,34 @@
+/*
+Write a JavaScript function checkBrackets(value) to check if in a given expression the 
+brackets are put correctly. Write JS program bracketsChecker.js that invokes your function 
+with the sample input data below and prints the output at the console. 
+*/
+
+
+function checkBrackets(str){
+
+	var leftScope = 0;
+	var rightScope = 0;		
+	var i = 0; 				//used for loop counter
+	
+	for(i; i < str.length; i++){
+		if(str[i] == '('){
+			leftScope = leftScope + 1;
+		}
+		
+		if(str[i] == ')'){
+			rightScope = rightScope + 1;
+		}
+	}
+	
+	if(rightScope == leftScope){
+		console.log('correct');
+	}else{
+		console.log('incorrect');
+	}
+
+}
+
+checkBrackets('( ( a + b ) / 5 – d )');
+checkBrackets(') ( a + b ) )');
+checkBrackets('( b * ( c + d *2 / ( 2 + ( 12 – c / ( a + 3 ) ) ) )');
