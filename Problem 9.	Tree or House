@@ -1,0 +1,33 @@
+/*
+Write a JavaScript function treeHouseCompare(value) that accepts the following parameters: 
+integers a and b. The function compares the area of the house and the area of the tree (Figure 
+1) and returns the name of the figure with bigger area (house or tree) and the value of the 
+area. Write JS program treehouse.js that compares a few houses and trees. The result should be 
+printed on the console. Run the program through Node.js. 
+*/
+
+function treeHouseCompare(a, b){
+	var areaHouse = (a*((a/3)*2))/2+(a*a);
+	var areaTree = (b*(b/3))+ ((b/3)*2)*((b/3)*2)*Math.PI;
+	
+	if(areaHouse < areaTree){
+		return ['tree/', areaTree.toFixed(2)];
+	} else{
+		return ['house/', areaHouse.toFixed(2)];
+	}
+}
+
+var output = treeHouseCompare(3, 2);
+var figure = output[0];
+var area = output[1];
+console.log(figure + area);
+
+var output = treeHouseCompare(3, 3);
+var figure = output[0];
+var area = output[1];
+console.log(figure + area);
+
+var output = treeHouseCompare(4, 5);
+var figure = output[0];
+var area = output[1];
+console.log(figure + area);
