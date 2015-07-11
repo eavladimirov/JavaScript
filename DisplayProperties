@@ -1,0 +1,23 @@
+/*
+Write a JavaScript function displayProperties(value) that displays all the properties 
+of the "document" object in alphabetical order. Write a JS program docProperties.js that 
+invokes your function with the sample input data below and prints the output at the console. 
+*/
+
+
+function displayProperties()
+{
+	var arrProperties = [];
+	var a=0, j=0;
+	
+	for (var property in document) {
+		arrProperties[a]=property;
+		a++;
+	}
+	arrProperties.sort();
+	for(j; j<arrProperties.length; j++){
+		console.log(arrProperties[j]);
+	}
+}
+
+displayProperties();
